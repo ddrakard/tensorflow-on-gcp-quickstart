@@ -51,9 +51,13 @@
     
     `docker tag 5cab90d5215b14603162c5b31071ea4fe48a841cbe5c30ff9c6a125e77fd4d69 us-docker.pkg.dev/my-project/docker-images/my-vertex-job`
 
-15. Click the `Create` button in the Training tab of Vertex AI in Google Cloud
+15. Push your image to your the Artifact Registry. For example:
+
+    `docker push us-docker.pkg.dev/my-project/docker-images/my-vertex-job`
+
+17. Click the `Create` button in the Training tab of Vertex AI in Google Cloud
     Platform.
-16. In the Train New Model panel that appears:
+17. In the Train New Model panel that appears:
     1. In the `Training method` stage, enter the following fields: Dataset:
        `No managed dataset`, Annotation set: `-`, Objective: `Custom`. Click
        the `Custom training (advanced)` option, then click the `CONTINUE`
