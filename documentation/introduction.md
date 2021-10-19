@@ -18,3 +18,6 @@ the [cloud workstation guide](cloud-workstation-guide.md). If you want to run a
 powerful training job, please see the [vertex AI guide](vertex-ai-guide.md).
 If you aren't sure, why not start with an interactive workstation, then move on
 to Vertex AI if you need more performance.
+
+There are additional tips and information in the
+[documentation directory](.).
