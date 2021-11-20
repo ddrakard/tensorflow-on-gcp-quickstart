@@ -32,37 +32,38 @@ from Chrome / Chromium web browser with no extra plugins needed).
    desktop. User the `sudo passwd $USER` and `sudo usermod -aG sudo $USER`
    commands. If you do not know the current username, run the `whoami` command
    to find out.
-7. Follow the instructions on this page
+7. Restart the VM so it connects to remote desktop with the correct hostname.
+8. Follow the instructions on this page
    https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine
    starting from the section "Installing Chrome Remote Desktop on the VM
    instance". You should now be able to connect to the graphical desktop.
 
 ### Optional
 
-8. Install Snap for software like PyCharm: `sudo apt install snapd`.
-9. Install the PyCharm IDE: `sudo snap install pycharm-community --classic`.
+9. Install Snap for software like PyCharm: `sudo apt install snapd`.
+10. Install the PyCharm IDE: `sudo snap install pycharm-community --classic`.
 
 ### Running in docker
 
-10. The procedure above should give you a workstation correctly configured to
+11. The procedure above should give you a workstation correctly configured to
     run Tensorflow with GPU acceleration. However Tensorflow GPU setup is quite
     fragile, and if you encounter problems or you wish to run your code on a
     different system, you may wish to run in a Docker container. This only
     requires basic GPU drivers (not CUDA and fragile version compatibility) on
     the host system. To do so continue the instructions.
-11. Ensure [Docker](https://www.docker.com/) is installed.
-12. Download this project onto the workstation.
-13. It is strongly recommended that you use a python virtual environment like
+12. Ensure [Docker](https://www.docker.com/) is installed.
+13. Download this project onto the workstation.
+14. It is strongly recommended that you use a python virtual environment like
    [venv](https://docs.python.org/3/library/venv.html). You can see
    [this guide](setting-up-venv.md) for instructions.
-14. Write your Python code inside this project. It is recommended to use the
+15. Write your Python code inside this project. It is recommended to use the
    convention where you put your source files inside a Python
    [package](https://docs.python.org/3/tutorial/modules.html) directory under
    the root of this project.
-15. Update the `setup.py` file in this project's base directory to include all
+16. Update the `setup.py` file in this project's base directory to include all
    the dependencies you need. To avoid errors, make sure you install
    dependencies only using the setup.py and not separately. To install
    dependencies you have listed in `setup.py`, you can run the command
    `pip3 install --editable .` (only recommended if you are using a virtual
    environment).
-16. Run `execution/run_in_docker_gpu.sh`
+17. Run `execution/run_in_docker_gpu.sh`
