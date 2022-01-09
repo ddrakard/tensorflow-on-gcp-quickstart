@@ -46,28 +46,29 @@ from Chrome / Chromium web browser with no extra plugins needed).
 
 10. Install Snap for software like PyCharm: `sudo apt install snapd`.
 11. Install the PyCharm IDE: `sudo snap install pycharm-community --classic`.
+12. Restart the VM so the PyCharm icon appears in the system menu.
 
 ### Running in docker
 
-12. The procedure above should give you a workstation correctly configured to
+13. The procedure above should give you a workstation correctly configured to
     run Tensorflow with GPU acceleration. However Tensorflow GPU setup is quite
     fragile, and if you encounter problems or you wish to run your code on a
     different system, you may wish to run in a Docker container. This only
     requires basic GPU drivers (not CUDA and fragile version compatibility) on
     the host system. To do so continue the instructions.
-13. Ensure [Docker](https://www.docker.com/) is installed.
-14. Download this project onto the workstation.
-15. It is strongly recommended that you use a python virtual environment like
+14. Ensure [Docker](https://www.docker.com/) is installed.
+15. Download this project onto the workstation.
+16. It is strongly recommended that you use a python virtual environment like
    [venv](https://docs.python.org/3/library/venv.html). You can see
    [this guide](setting-up-venv.md) for instructions.
-16. Write your Python code inside this project. It is recommended to use the
+17. Write your Python code inside this project. It is recommended to use the
    convention where you put your source files inside a Python
    [package](https://docs.python.org/3/tutorial/modules.html) directory under
    the root of this project.
-17. Update the `setup.py` file in this project's base directory to include all
+18. Update the `setup.py` file in this project's base directory to include all
    the dependencies you need. To avoid errors, make sure you install
    dependencies only using the setup.py and not separately. To install
    dependencies you have listed in `setup.py`, you can run the command
    `pip3 install --editable .` (only recommended if you are using a virtual
    environment).
-18. Run `execution/run_in_docker_gpu.sh`
+19. Run `execution/run_in_docker_gpu.sh`
